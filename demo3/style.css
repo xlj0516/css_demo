@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    padding:0;
+    background:#FFE8D4;
+    height:100%;
+}
+.moon{
+    transform:translate3d(0,0,0);
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background:#e5a4cb;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    
+}
+.moon:before,.moon:after{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    content:'';
+    width:40px;
+    height:40px;
+    background:#bbb;
+    border-radius:50px;
+    z-index: 1;
+    transform-origin: center center -133.333px;
+    animation: orbit 3s linear  infinite;
+    backface-visibility:hidden;
+
+}
+.moon:before{
+    transform-origin: center center -100px;
+    background:#555;
+    opacity:0.5;
+    width: 30px;
+    height:30px;
+}
+.moon.behind:after{
+    backface-visibility: visible;
+}
+@keyframes orbit{
+    from{
+        transform: rotateX(0) rotateY(359deg);
+    }
+    to{
+        transform: rotateX(359deg) rotateY(-359deg);
+    }
+       
+
+}
+.eye{
+    width:6px;
+    height:6px;
+    border:10px solid #fff;
+    border-radius: 50%;
+    background:#000;
+    position:absolute;
+    top:60px;
+
+}
+.left{
+    left:60px;
+}
+.right{
+    right:60px;
+}
+.mouth{
+    position:absolute;
+    height:20px;
+    width:90px;
+    top:120px;
+    left:55px;
+    background:#fff;
+    border-radius: 0 0 45px 45px/0 0 20px 20px;
+}
