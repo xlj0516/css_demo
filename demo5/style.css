@@ -1,0 +1,68 @@
+.clouds{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:#68adf2;
+}
+.cloud{
+    width:22em;
+    height:7em;
+    background:#f2f9fe;
+    border-radius:6em;
+    position: relative;
+    margin:5em auto 1.25em;
+}
+.cloud::before,.cloud::after{
+    content:'';
+    position:absolute;
+    background:#f2f9fe;
+    z-index: -1;
+    border-radius:50%;
+}
+.cloud:before{
+    width:11em;
+    height:11em;
+    top:-5.5em;
+    right:3em;
+}
+.cloud::after{
+    width:7em;
+    height:7em;
+    top:-3.5em;
+    left:3em
+}
+.cloud1{
+    transform:scale(0.9,0.9);
+    animation: move 30s linear infinite;
+}
+.cloud.cloud2{
+    left:12.5em;
+    transform:scale(0.7,0.7);
+    animation: move 36s linear infinite;
+}
+.cloud.cloud3{
+    left:-15em;
+    transform:scale(0.4,0.4);
+    animation: move 30s linear infinite;
+}
+.cloud.cloud4{
+    left:12.5em;
+    transform:scale(0.5,0.5);
+    animation: move 42s linear infinite;
+}
+.cloud.cloud5{
+    left:-38em;
+    transform:scale(0.3,0.3);
+    animation: move 55s linear infinite;
+}
+@keyframes move{
+    from{
+        margin-left:125em;
+    }
+    to{
+        margin-left:-125em;
+    }
+
+}
