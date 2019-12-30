@@ -1,0 +1,65 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: XLJ
+ * @Date: 2019-12-30 16:11:45
+ * @LastEditors  : XLJ
+ * @LastEditTime : 2019-12-30 17:46:04
+ * @Email: 1060541678@qq.com
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="top">
+                <span class="clear">C</span>
+                <div class="screen"></div>
+            </div>
+            <div class="keys">
+                <span>7</span><span>8</span><span>9</span><span class="operator">+</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span class="operator">-</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span class="operator">/</span>
+                <span>0</span>
+                <span>.</span>
+                <span class="eavl">=</span>
+                <span class="operator">*</span>
+            </div>
+        </div>
+        <script>
+            var keys = document.querySelectorAll(".calculator span");
+            var operator = ['+','-','*','/'];
+            var screen = document.querySelector(".screen");
+            var decimalAdded = false;
+            for(let i=0;i<keys.length;i++){
+                keys[i].onmousedown = function(){
+                    this.classList.add("active");
+                }
+                keys[i].onmouseup = function(){
+                    this.classList.remove("active");
+                }
+                keys[i].onclick = function(){
+                    if(this.innerHTML == 'C'){
+                        screen.innerHTML="";
+                    }else if(this.innerHTML == '='){
+                        screen.innerHTML=eval(screen.innerHTML);
+                    }else{
+                        screen.innerHTML = screen.innerHTML + this.innerHTML
+                    }
+                   
+                }
+            }
+        </script>
+    </body>
+</html>
