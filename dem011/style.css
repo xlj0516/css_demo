@@ -1,0 +1,52 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: XLJ
+ * @Date: 2019-12-31 11:13:19
+ * @LastEditors  : XLJ
+ * @LastEditTime : 2019-12-31 11:47:41
+ * @Email: 1060541678@qq.com
+ */
+ *{
+     margin:0;
+     padding:0;
+
+ }
+ .ribbon{
+     margin:20px auto;
+     padding:10px 20px;
+     background:rgb(49, 179, 118);
+     border:3px solid #eee;
+     position:relative;
+     color:white;
+     text-align: center;
+     width:400px;
+ }
+ .ribbon::before,.ribbon::after{
+     content:''; 
+     position:absolute;
+     border-style: solid;
+     border-width: 32px;
+     height:0;
+     width:0;
+     display: block;
+ }
+ .ribbon:before{
+     border-color: rgb(8, 151, 96) rgb(8, 151, 96) rgb(8, 151, 96) transparent;
+     z-index: -1;
+     left:-50px;
+     bottom:-20px;
+ }
+ .ribbon:after{
+    border-color: rgb(8, 151, 96) transparent rgb(8, 151, 96) rgb(8, 151, 96) ;
+    z-index: -1;
+    right:-50px;
+    bottom:-20px;
+}
+.ribbon h1{
+	font-weight: 300px;
+	font-family: "Helvetica", sans-serif;
+	letter-spacing: 2px;
+	display: inline-block;
+	white-space: nowrap;
+}
