@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    height:100vh;
+    background:#333;
+}
+.container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    perspective: 800px;
+}
+.toggle{
+    position:relative;
+    border:solid 6px #04da97;
+    border-radius:56px;
+    transition:transform cubic-bezier(0, 0, 0.30, 2) .4s;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+.toggle>label{
+    display: inline-block;
+    padding:30px;
+    min-width: 170px;
+    text-align: center;
+    color:#04da97;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.toggle>input{
+    display: none;
+}
+.toggle>.flag{
+    position: absolute;
+    height:calc(100% + 12px);
+    width:50%;
+    background:#04da97;
+    border-radius:0 56px 56px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:-6px;
+    left: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    color:#333;
+    transform-origin:left;
+    transform-style:preserve-3d ;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) .5s;
+    text-transform: capitalize;
+}
+.toggle>#choice1:checked~.flag{
+    transform: rotateY(-180deg);
+}
+.toggle>#choice2:checked~.flag{
+    transform: rotateY(0deg);
+}

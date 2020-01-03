@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toggle Switch</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <form class="toggle">
+                <label for="choice1">on</label><input type="radio" id="choice1" name="choice"/>
+                <label for="choice2">off</label><input type="radio" id="choice2" name="choice"/>
+                <div class="flag"></div>
+            </form>
+        </div>
+    </body>
+    <script>
+        var on = document.getElementById('choice1');
+        var off = document.getElementById('choice2');
+        var toggle = document.getElementsByClassName('toggle')[0];
+        toggle.onclick=function(){
+            if(on.checked){
+                console.log('开灯');
+            }
+            if(off.checked){
+                console.log('关灯');
+            }
+        }
+    </script>
+</html>
