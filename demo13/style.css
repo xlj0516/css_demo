@@ -1,0 +1,116 @@
+.wrapper{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+.wrapper .video{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    clip-path:circle(15px at left);
+    transition:clip-path 0.4s ease;
+}
+.wrapper .video video{
+    position:fixed;
+    background:#c4cdbe;
+    top:50%;
+    left:50%;
+    min-width: 100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    transform: translate(-50%,-50%);
+
+}
+.wrapper .text{
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2;
+}
+.wrapper .text::before,.wrapper .text::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:-1px;
+    right:25px;
+    height:0;
+}
+.wrapper .text::before{
+    box-shadow:26px 0 0 1px #1F242D;
+    right:100%;
+    opacity: 0;
+    transition: right .5s ease-in, opacity .1s linear;
+}
+.wrapper .text::after{
+    box-shadow: 26px 0 0 1px #FFF;
+      clip-path: circle(15px at left);
+      transition: clip-path 0.4 ease;
+}
+.wrapper .text>span:before,.wrapper .text>span:after{
+    content: attr(data-text);
+    padding-left:26px;
+}
+.wrapper .text>span:before{
+    color:#1F242D;
+}
+.wrapper .text>span:after{
+    color:#fff;
+    clip-path: circle(15px at left);
+    transition: clip-path 0.4 ease;
+    position: absolute;
+    left: 0;
+}
+.wrapper input{
+    width: 220px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    z-index: 2;
+    appearance: none;
+    cursor: pointer;
+    opacity: 0;
+}
+.wrapper input:focus{
+    outline:0;
+}
+.wrapper input:hover + .video{
+    clip-path: circle(70px at left);
+}
+.wrapper input:hover + .text::before{
+    right:25px;
+}
+.wrapper input:hover + .text::after{
+    clip-path: circle(70px at left);
+}
+.wrapper input:hover + text>span::after{
+    clip-path: circle(70px at left);
+}
+.wrapper input:checked{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.wrapper input:checked+.video{
+    clip-path: circle(100vw at left);
+}
+.wrapper input:checked+.text{
+    opacity: 0;
+    /* transition: opacity 0.3s ease; */
+}
+.wrapper input:checked+.text::after{
+    clip-path: circle(100vw at left);
+}
+.wrapper input:checked+.text>span::after{
+    clip-path: circle(100vw at left);
+}
