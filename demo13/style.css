@@ -104,7 +104,7 @@
 .wrapper input:checked+.video{
     clip-path: circle(100vw at left);
 }
-.wrapper input:checked+.text{
+.wrapper input:checked~.text{
     opacity: 0;
     /* transition: opacity 0.3s ease; */
 }
