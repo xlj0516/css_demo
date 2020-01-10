@@ -1,0 +1,107 @@
+body{
+    background-color:#1abc9c;
+    font-size: 16px;
+}
+.flex-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 300px;
+    text-align: center;
+}
+fieldset{
+    border:0;
+}
+input[type="radio"]{
+    position:fixed;
+    left:-100px;
+}
+input:not([type="radio"]){
+    appearance: none;
+    background-color:#fff;
+    display:block;
+    transition: all 300ms ease;
+    border-radius: 7px;
+    border:0;
+    max-height: 0;
+    margin:0;
+    padding:0 10px;
+    overflow: hidden;
+    width:250px;
+    opacity: 0;
+    font-size: 16px;
+    text-align:center;
+    outline: 0;
+    box-sizing: border-box;
+}
+[id="sign-in"]:checked ~ input.sign-in,
+[id="sign-up"]:checked ~ input.sign-up,
+[id="reset"]:checked ~ input.reset
+{
+    max-height:40px;
+    padding:10px;
+    margin: 10px 0;
+    opacity:1;
+}
+button{
+    width:250px;
+    height:40px;
+    border-radius: 7px;
+    background-color: #16a085;
+    font-size: 0;
+    border:0;
+}
+[id="sign-in"]:checked ~button:before{
+    content: "Sign In";
+    font-size: 16px;
+}
+[id="sign-up"]:checked ~button:before{
+    content: "Sign Up";
+    font-size: 16px;
+}
+[id="reset"]:checked ~button:before{
+    content: "Reset Password";
+    font-size: 16px;
+}
+label{
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor:pointer;
+    transition: all 300ms ease;
+    width:30%;
+}
+label::after{
+    content:'';
+    border:10px solid transparent;
+    position:absolute;
+    left: calc(50% - 10px);
+    bottom:-10px;
+    transition: inherit;
+}
+[id="sign-in"]:checked ~ [for="sign-in"]{
+    color:#fff;
+
+}
+[id="sign-in"]:checked ~ [for="sign-in"]::after{
+    border-bottom-color: #fff;
+    
+}
+[id="sign-up"]:checked ~ [for="sign-up"]{
+    color:#fff;
+
+}
+[id="sign-up"]:checked ~ [for="sign-up"]::after{
+    border-bottom-color: #fff;
+    
+}
+[id="reset"]:checked ~ [for="reset"]{
+    color:#fff;
+
+}
+[id="reset"]:checked ~ [for="reset"]::after{
+    border-bottom-color: #fff;
+    
+}
