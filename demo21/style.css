@@ -28,65 +28,65 @@ button::after {
     content:'happy new year';
     background: linear-gradient(45deg, transparent 3%,blue 3%,blue 5%, red 5%);
     text-shadow: -2px -2px 0 blue, 2px 2px 0 blue;
-    clip-path: inset(20px,20px,20px,20px);
+    clip-path: inset(50% 50% 50% 50%);
 }
 button:hover::after{
     animation: shangshuo 1s steps(2, end) ;
 }
 @keyframes shangshuo{
     0% {
-        clip-path: inset(20%,-3px,60%,0);
-        -webkit-clip-path: inset(20%,-3px,60%,0);
-        transform: translate(-10px, -50px);
+        clip-path: inset(20% -3px 60% 0);
+        -webkit-clip-path: inset(20% -3px 60% 0);
+        transform: translate(-10px, -5px);
       }
     10% {
-        clip-path: inset(50%,-3px,30%,0);
-        -webkit-clip-path: inset(50%,-3px,30%,0);
+        clip-path: inset(50% -3px 30% 0);
+        -webkit-clip-path: inset(50% -3px 30% 0);
         transform: translate(5px, 5px);
     } 
     20% {
-        clip-path: inset(30%,-3px,50%,0);
-        -webkit-clip-path: inset(30%,-3px,50%,0);
+        clip-path: inset(30% -3px 50% 0);
+        -webkit-clip-path: inset(30% -3px 50% 0);
         transform: translate(-5px, 5px);
     } 
     30% {
-        clip-path:inset(20%,-3px,60%,0);
-        -webkit-clip-path:inset(20%,-3px,60%,0);
+        clip-path:inset(20% -3px 60% 0);
+        -webkit-clip-path:inset(20% -3px 60% 0);
         transform: translate(0px, 3px);
     }
     40% {
-        clip-path:inset(60%,-3px,30%,0);
-        -webkit-clip-path:inset(60%,-3px,30%,0);
+        clip-path:inset(60% -3px 30% 0);
+        -webkit-clip-path:inset(60% -3px 30% 0);
         transform: translate(-3px, 0px);
     }
     50% {
-        clip-path:inset(50%,-3px,30%,0);
-        -webkit-clip-path:inset(50%,-3px,30%,0);
+        clip-path:inset(50% -3px 30% 0);
+        -webkit-clip-path:inset(50% -3px 30% 0);
         transform:translate(3px, 0px);
     } 
     60% {
-        clip-path:inset(80%,-3px,0,0);
-        -webkit-clip-path:inset(80%,-3px,0,0);
+        clip-path:inset(80% -3px 0 0);
+        -webkit-clip-path:inset(80% -3px 0 0);
         transform:translate(3px, 5px);
     } 
     70% {
-        clip-path:inset(20%,-3px,60%,0);
-        -webkit-clip-path:inset(20%,-3px,60%,0);
+        clip-path:inset(20% -3px 60% 0);
+        -webkit-clip-path:inset(20% -3px 60% 0);
         transform: translate(-5px, 5px);
     }
     80% {
-        clip-path: inset(40%,-3px,40%,0);
-        -webkit-clip-path: inset(40%,-3px,40%,0);
+        clip-path: inset(40% -3px 40% 0);
+        -webkit-clip-path: inset(40% -3px 40% 0);
         transform: translate(10px, -5px);
     } 
     90% {
-        clip-path:inset(60%,-3px,20%,0);
-        -webkit-clip-path:inset(60%,-3px,20%,0);
+        clip-path:inset(60% -3px 20% 0);
+        -webkit-clip-path:inset(60% -3px 20% 0);
         transform: translate(-5px, 0px);
     } 
     100% {
-        clip-path:inset(20% ,-3px,60%,0);
-        -webkit-clip-path:inset(20%,- 3px,60%,0);
-        transform: translate(0);
+        clip-path:inset(20% -3px 60% 0);
+        -webkit-clip-path:inset(20% -3px 60% 0);
+        transform: translate(0, 5px);
     }
 }
